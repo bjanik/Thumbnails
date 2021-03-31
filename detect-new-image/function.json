@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "app-thumbnails/{name}",
+      "connection": "bartstorage_STORAGE"
+    }
+  ]
+}
