@@ -5,7 +5,7 @@
       "type": "blobTrigger",
       "direction": "in",
       "path": "app-thumbnails/{name}",
-      "connection": "bartstorage_STORAGE"
+      "connection": "bartstorage"
     }
   ]
 }
