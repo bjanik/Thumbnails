@@ -15,7 +15,7 @@ env:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v2
@@ -26,7 +26,7 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
 
     - name: 'Resolve Project Dependencies Using Npm'
-      shell: pwsh
+      shell: bash
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         npm install
@@ -41,4 +41,4 @@ jobs:
         app-name: 'bart-thumbnail'
         slot-name: 'production'
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5bff211f0d5c4685b572846365c6937d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_beaaab490d8344a58adf58bc5934414e }}
